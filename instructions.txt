@@ -1,0 +1,32 @@
+Build Process for Raspberry Pi Pico (Windows, Minimal Command Line)
+
+1. Finish Editing Script:
+   - Edit `main.c` in `C:\pico\my_projects` (e.g., in VS Code or any text editor).
+   - Ensure `CMakeLists.txt` is updated if new libraries are needed (e.g., `hardware_gpio`).
+
+2. Build the Project: (Ctrl + s to savea and build)
+   - Open PowerShell (or Command Prompt) and navigate to project folder:
+     cd C:\pico\my_projects
+   - Configure CMake (only needed if `CMakeLists.txt` changes):
+     cmake -S . -B build -G "MinGW Makefiles"
+   - Build the project:
+     cmake --build build
+   - Output: `my_project.uf2` appears in `C:\pico\my_projects\build`.
+
+3. Flash to Pico (One-Line Command):
+   - Put Pico in BOOTSEL mode:
+     - Disconnect USB, hold BOOTSEL button, plug in USB, release BOOTSEL.
+     - Pico appears as "RPI-RP2" drive (e.g., D:).
+   - Run in PowerShell (replace D: with your drive letter):
+     Copy-Item -Path C:\pico\my_projects\build\my_project.uf2 -Destination D:
+   - Pico restarts and runs the new code.
+
+   Copy-Item -Path C:\pico\my_projects\build/my_project.uf2 -Destination  D:
+
+4. Verify:
+   - Open PuTTY (Serial, COM port from Device Manager, 115200 baud).
+   - Check for expected output (e.g., "Hello from Pico!").
+
+Notes:
+- Ensure ARM GCC (e.g., 14.2.1), CMake, and Pico SDK are in PATH or configured in VS Code.
+- If build fails, check PowerShell output for errors.

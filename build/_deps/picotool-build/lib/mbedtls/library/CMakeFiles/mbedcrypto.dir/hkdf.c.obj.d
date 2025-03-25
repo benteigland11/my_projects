@@ -1,0 +1,32 @@
+lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/hkdf.c.obj: \
+ C:\pico\pico-sdk\lib\mbedtls\library\hkdf.c \
+ C:\pico\pico-sdk\lib\mbedtls\library\common.h \
+ C:/pico/pico-sdk/lib/mbedtls/include/mbedtls/config.h \
+ C:/pico/pico-sdk/lib/mbedtls/include/mbedtls/check_config.h \
+ C:/Strawberry/c/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
+ C:/Strawberry/c/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/limits.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/crtdefs.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/corecrt.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/_mingw.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/_mingw_mac.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/vadefs.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/assert.h \
+ C:/Strawberry/c/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/stddef.h \
+ C:/Strawberry/c/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/stdint.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/string.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ C:/pico/pico-sdk/lib/mbedtls/include/mbedtls/hkdf.h \
+ C:/pico/pico-sdk/lib/mbedtls/include/mbedtls/md.h \
+ C:/pico/pico-sdk/lib/mbedtls/include/mbedtls/platform_util.h \
+ C:/pico/pico-sdk/lib/mbedtls/include/mbedtls/platform_time.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/time.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/sys/timeb.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/_timeval.h \
+ C:/Strawberry/c/x86_64-w64-mingw32/include/pthread_time.h \
+ C:/pico/pico-sdk/lib/mbedtls/include/mbedtls/error.h

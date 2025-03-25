@@ -1,0 +1,5 @@
+C:/pico/my_projects/build/_deps/picotool/picotool.exe
+C:/pico/my_projects/build/_deps/picotool/picotoolTargets.cmake
+C:/pico/my_projects/build/_deps/picotool/picotoolTargets-release.cmake
+C:/pico/my_projects/build/_deps/picotool/picotoolConfig.cmake
+C:/pico/my_projects/build/_deps/picotool/picotoolConfigVersion.cmake

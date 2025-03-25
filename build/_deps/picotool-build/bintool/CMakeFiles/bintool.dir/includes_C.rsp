@@ -1,0 +1,1 @@
+-I"C:/pico/my_projects/build/_deps/picotool-src/bintool" -I"C:/pico/pico-sdk/lib/mbedtls/include" -I"C:/pico/pico-sdk/lib/mbedtls/3rdparty/everest/include" -I"C:/pico/my_projects/build/_deps/picotool-src/elf" -I"C:/pico/my_projects/build/_deps/picotool-src/errors" -isystem "C:/pico/pico-sdk/src/common/boot_picobin_headers/include"
