@@ -12,7 +12,6 @@ Linker script and memory map
                 0x20041f00                        . = ORIGIN (SRAM)
 
 .text           0x20041f00       0xf0
-                0x20041f00                        _start = .
  *(.entry)
  *(.text)
  .text          0x20041f00       0xf0 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.obj

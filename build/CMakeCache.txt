@@ -46,11 +46,12 @@ CMAKE_ASM_FLAGS_RELEASE:STRING=-g -O3 -DNDEBUG
 //Flags used by the ASM compiler during RELWITHDEBINFO builds.
 CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//No help, variable specified on the command line.
-CMAKE_BUILD_TYPE:STRING=Debug
+//Choose the type of build, options are: 'Debug', 'Release', 'MinSizeRel',
+// 'RelWithDebInfo'.
+CMAKE_BUILD_TYPE:STRING=Release
 
-//No help, variable specified on the command line.
-CMAKE_CXX_COMPILER:FILEPATH=C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/arm-none-eabi-g++.exe
+//CXX compiler
+CMAKE_CXX_COMPILER:STRING=C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/arm-none-eabi-g++.exe
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -75,8 +76,8 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-g -O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//No help, variable specified on the command line.
-CMAKE_C_COMPILER:FILEPATH=C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/arm-none-eabi-gcc.exe
+//C compiler
+CMAKE_C_COMPILER:STRING=C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/arm-none-eabi-gcc.exe
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -119,8 +120,8 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//No help, variable specified on the command line.
-CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
+//Enable/Disable output of compile commands during generation.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=C:/pico/my_projects/build/CMakeFiles/pkgRedirects
@@ -254,8 +255,18 @@ FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
 //Enables QUIET option for all content population
 FETCHCONTENT_QUIET:BOOL=ON
 
+//When not empty, overrides where to find pre-populated content
+// for picotool
+FETCHCONTENT_SOURCE_DIR_PICOTOOL:PATH=
+
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of picotool
+FETCHCONTENT_UPDATES_DISCONNECTED_PICOTOOL:BOOL=OFF
+
+//Git command line client
+GIT_EXECUTABLE:FILEPATH=C:/Program Files/Git/cmd/git.exe
 
 //PICO target board (e.g. pico, pico2)
 PICO_BOARD:STRING=pico
@@ -338,6 +349,12 @@ pico_sdk_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 pico_sdk_SOURCE_DIR:STATIC=C:/pico/pico-sdk
 
+//The directory containing a CMake configuration file for picotool.
+picotool_DIR:PATH=picotool_DIR-NOTFOUND
+
+//Directory where picotool has been installed
+picotool_INSTALL_DIR:PATH=C:/pico/my_projects/build/_deps
+
 //The directory containing a CMake configuration file for pioasm.
 pioasm_DIR:PATH=pioasm_DIR-NOTFOUND
 
@@ -367,6 +384,8 @@ CMAKE_ASM_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_ASM_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ASM_FLAGS_RELWITHDEBINFO
 CMAKE_ASM_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//STRINGS property for variable: CMAKE_BUILD_TYPE
+CMAKE_BUILD_TYPE-STRINGS:INTERNAL=Debug;Release;MinSizeRel;RelWithDebInfo
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=c:/pico/my_projects/build
 //Major version of cmake used to create the current loaded cache
@@ -427,6 +446,8 @@ CMAKE_EXE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_EXE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
+CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
@@ -457,7 +478,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=96
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=94
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -507,7 +528,8 @@ DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
 FAMILY_MCUS:INTERNAL=RP2040
 //Details about finding Python3
 FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[C:/Users/bente/AppData/Local/Programs/Python/Python312/python.exe][cfound components: Interpreter ][v3.12.4()]
-PICO_32BIT:INTERNAL=1
+//ADVANCED property for variable: GIT_EXECUTABLE
+GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 PICO_ARM:INTERNAL=1
 PICO_BOOT_STAGE2_DIR:INTERNAL=C:/pico/pico-sdk/src/rp2040/boot_stage2
 PICO_CMAKE_PRELOAD_PLATFORM_DIR:INTERNAL=C:/pico/pico-sdk/cmake/preload/platforms
@@ -516,7 +538,7 @@ PICO_CMSIS_DEVICE:INTERNAL=RP2040
 PICO_COMPILER_ASM:INTERNAL=C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/arm-none-eabi-gcc.exe
 PICO_DOXYGEN_ENABLED_SECTIONS:INTERNAL=rp2040_specific
 PICO_DOXYGEN_EXCLUDE_PATHS:INTERNAL=C:/pico/pico-sdk/src/rp2040/hardware_regs;C:/pico/pico-sdk/src/rp2_common/cmsis
-PICO_DOXYGEN_PATHS:INTERNAL=C:/pico/pico-sdk/src/common/boot_picobin_headers;C:/pico/pico-sdk/src/common/boot_picoboot_headers;C:/pico/pico-sdk/src/common/boot_uf2_headers;C:/pico/pico-sdk/src/common/pico_base_headers;C:/pico/pico-sdk/src/common/pico_usb_reset_interface_headers;C:/pico/pico-sdk/src/common/pico_bit_ops_headers;C:/pico/pico-sdk/src/common/pico_binary_info;C:/pico/pico-sdk/src/common/pico_divider_headers;C:/pico/pico-sdk/src/common/pico_sync;C:/pico/pico-sdk/src/common/pico_time;C:/pico/pico-sdk/src/common/pico_util;C:/pico/pico-sdk/src/common/pico_stdlib_headers;C:/pico/pico-sdk/src/common/hardware_claim;C:/pico/pico-sdk/src/rp2040/pico_platform;C:/pico/pico-sdk/src/rp2040/hardware_regs;C:/pico/pico-sdk/src/rp2040/hardware_structs;C:/pico/pico-sdk/src/rp2040/boot_stage2;C:/pico/pico-sdk/src/rp2_common/hardware_base;C:/pico/pico-sdk/src/rp2_common/hardware_adc;C:/pico/pico-sdk/src/rp2_common/hardware_boot_lock;C:/pico/pico-sdk/src/rp2_common/hardware_clocks;C:/pico/pico-sdk/src/rp2_common/hardware_divider;C:/pico/pico-sdk/src/rp2_common/hardware_dma;C:/pico/pico-sdk/src/rp2_common/hardware_exception;C:/pico/pico-sdk/src/rp2_common/hardware_flash;C:/pico/pico-sdk/src/rp2_common/hardware_gpio;C:/pico/pico-sdk/src/rp2_common/hardware_i2c;C:/pico/pico-sdk/src/rp2_common/hardware_interp;C:/pico/pico-sdk/src/rp2_common/hardware_irq;C:/pico/pico-sdk/src/rp2_common/hardware_pio;C:/pico/pico-sdk/src/rp2_common/hardware_pll;C:/pico/pico-sdk/src/rp2_common/hardware_pwm;C:/pico/pico-sdk/src/rp2_common/hardware_resets;C:/pico/pico-sdk/src/rp2_common/hardware_rtc;C:/pico/pico-sdk/src/rp2_common/hardware_spi;C:/pico/pico-sdk/src/rp2_common/hardware_sync;C:/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock;C:/pico/pico-sdk/src/rp2_common/hardware_ticks;C:/pico/pico-sdk/src/rp2_common/hardware_timer;C:/pico/pico-sdk/src/rp2_common/hardware_uart;C:/pico/pico-sdk/src/rp2_common/hardware_vreg;C:/pico/pico-sdk/src/rp2_common/hardware_watchdog;C:/pico/pico-sdk/src/rp2_common/hardware_xip_cache;C:/pico/pico-sdk/src/rp2_common/hardware_xosc;C:/pico/pico-sdk/src/rp2_common/boot_bootrom_headers;C:/pico/pico-sdk/src/rp2_common/pico_platform_compiler;C:/pico/pico-sdk/src/rp2_common/pico_platform_sections;C:/pico/pico-sdk/src/rp2_common/pico_platform_panic;C:/pico/pico-sdk/src/rp2_common/pico_aon_timer;C:/pico/pico-sdk/src/rp2_common/pico_bootrom;C:/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset;C:/pico/pico-sdk/src/rp2_common/pico_multicore;C:/pico/pico-sdk/src/rp2_common/pico_unique_id;C:/pico/pico-sdk/src/rp2_common/pico_atomic;C:/pico/pico-sdk/src/rp2_common/pico_bit_ops;C:/pico/pico-sdk/src/rp2_common/pico_divider;C:/pico/pico-sdk/src/rp2_common/pico_double;C:/pico/pico-sdk/src/rp2_common/pico_int64_ops;C:/pico/pico-sdk/src/rp2_common/pico_flash;C:/pico/pico-sdk/src/rp2_common/pico_float;C:/pico/pico-sdk/src/rp2_common/pico_mem_ops;C:/pico/pico-sdk/src/rp2_common/pico_malloc;C:/pico/pico-sdk/src/rp2_common/pico_printf;C:/pico/pico-sdk/src/rp2_common/pico_rand;C:/pico/pico-sdk/src/rp2_common/pico_stdio_semihosting;C:/pico/pico-sdk/src/rp2_common/pico_stdio_uart;C:/pico/pico-sdk/src/rp2_common/pico_stdio_rtt;C:/pico/pico-sdk/src/rp2_common/cmsis;C:/pico/pico-sdk/src/rp2_common/tinyusb;C:/pico/pico-sdk/src/rp2_common/pico_stdio_usb;C:/pico/pico-sdk/src/rp2_common/pico_i2c_slave;C:/pico/pico-sdk/src/rp2_common/pico_async_context;C:/pico/pico-sdk/src/rp2_common/pico_btstack;C:/pico/pico-sdk/src/rp2_common/pico_cyw43_driver;C:/pico/pico-sdk/src/rp2_common/pico_lwip/tools;C:/pico/pico-sdk/src/rp2_common/pico_lwip;C:/pico/pico-sdk/lib/cyw43-driver/src;C:/pico/pico-sdk/src/rp2_common/pico_cyw43_arch;C:/pico/pico-sdk/src/rp2_common/pico_mbedtls;C:/pico/pico-sdk/src/rp2_common/pico_time_adapter;C:/pico/pico-sdk/src/rp2_common/pico_crt0;C:/pico/pico-sdk/src/rp2_common/pico_clib_interface;C:/pico/pico-sdk/src/rp2_common/pico_cxx_options;C:/pico/pico-sdk/src/rp2_common/pico_standard_binary_info;C:/pico/pico-sdk/src/rp2_common/pico_standard_link;C:/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration;C:/pico/pico-sdk/src/rp2_common/pico_fix;C:/pico/pico-sdk/src/rp2_common/pico_runtime_init;C:/pico/pico-sdk/src/rp2_common/pico_runtime;C:/pico/pico-sdk/src/rp2_common/pico_stdio;C:/pico/pico-sdk/src/rp2_common/pico_stdlib;C:/pico/my_projects/build/pico-sdk/src/extra_doxygen
+PICO_DOXYGEN_PATHS:INTERNAL=C:/pico/pico-sdk/src/common/boot_picobin_headers;C:/pico/pico-sdk/src/common/boot_picoboot_headers;C:/pico/pico-sdk/src/common/boot_uf2_headers;C:/pico/pico-sdk/src/common/pico_base_headers;C:/pico/pico-sdk/src/common/pico_usb_reset_interface_headers;C:/pico/pico-sdk/src/common/pico_bit_ops_headers;C:/pico/pico-sdk/src/common/pico_binary_info;C:/pico/pico-sdk/src/common/pico_divider_headers;C:/pico/pico-sdk/src/common/pico_sync;C:/pico/pico-sdk/src/common/pico_time;C:/pico/pico-sdk/src/common/pico_util;C:/pico/pico-sdk/src/common/pico_stdlib_headers;C:/pico/pico-sdk/src/common/hardware_claim;C:/pico/pico-sdk/src/rp2040/pico_platform;C:/pico/pico-sdk/src/rp2040/hardware_regs;C:/pico/pico-sdk/src/rp2040/hardware_structs;C:/pico/pico-sdk/src/rp2040/boot_stage2;C:/pico/pico-sdk/src/rp2_common/hardware_base;C:/pico/pico-sdk/src/rp2_common/hardware_adc;C:/pico/pico-sdk/src/rp2_common/hardware_boot_lock;C:/pico/pico-sdk/src/rp2_common/hardware_clocks;C:/pico/pico-sdk/src/rp2_common/hardware_divider;C:/pico/pico-sdk/src/rp2_common/hardware_dma;C:/pico/pico-sdk/src/rp2_common/hardware_exception;C:/pico/pico-sdk/src/rp2_common/hardware_flash;C:/pico/pico-sdk/src/rp2_common/hardware_gpio;C:/pico/pico-sdk/src/rp2_common/hardware_i2c;C:/pico/pico-sdk/src/rp2_common/hardware_interp;C:/pico/pico-sdk/src/rp2_common/hardware_irq;C:/pico/pico-sdk/src/rp2_common/hardware_pio;C:/pico/pico-sdk/src/rp2_common/hardware_pll;C:/pico/pico-sdk/src/rp2_common/hardware_pwm;C:/pico/pico-sdk/src/rp2_common/hardware_resets;C:/pico/pico-sdk/src/rp2_common/hardware_rtc;C:/pico/pico-sdk/src/rp2_common/hardware_spi;C:/pico/pico-sdk/src/rp2_common/hardware_sync;C:/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock;C:/pico/pico-sdk/src/rp2_common/hardware_ticks;C:/pico/pico-sdk/src/rp2_common/hardware_timer;C:/pico/pico-sdk/src/rp2_common/hardware_uart;C:/pico/pico-sdk/src/rp2_common/hardware_vreg;C:/pico/pico-sdk/src/rp2_common/hardware_watchdog;C:/pico/pico-sdk/src/rp2_common/hardware_xosc;C:/pico/pico-sdk/src/rp2_common/pico_bootrom;C:/pico/pico-sdk/src/rp2_common/pico_platform_compiler;C:/pico/pico-sdk/src/rp2_common/pico_platform_sections;C:/pico/pico-sdk/src/rp2_common/pico_platform_panic;C:/pico/pico-sdk/src/rp2_common/pico_aon_timer;C:/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset;C:/pico/pico-sdk/src/rp2_common/pico_multicore;C:/pico/pico-sdk/src/rp2_common/pico_unique_id;C:/pico/pico-sdk/src/rp2_common/pico_atomic;C:/pico/pico-sdk/src/rp2_common/pico_bit_ops;C:/pico/pico-sdk/src/rp2_common/pico_divider;C:/pico/pico-sdk/src/rp2_common/pico_double;C:/pico/pico-sdk/src/rp2_common/pico_int64_ops;C:/pico/pico-sdk/src/rp2_common/pico_flash;C:/pico/pico-sdk/src/rp2_common/pico_float;C:/pico/pico-sdk/src/rp2_common/pico_mem_ops;C:/pico/pico-sdk/src/rp2_common/pico_malloc;C:/pico/pico-sdk/src/rp2_common/pico_printf;C:/pico/pico-sdk/src/rp2_common/pico_rand;C:/pico/pico-sdk/src/rp2_common/pico_stdio_semihosting;C:/pico/pico-sdk/src/rp2_common/pico_stdio_uart;C:/pico/pico-sdk/src/rp2_common/pico_stdio_rtt;C:/pico/pico-sdk/src/rp2_common/cmsis;C:/pico/pico-sdk/src/rp2_common/tinyusb;C:/pico/pico-sdk/src/rp2_common/pico_stdio_usb;C:/pico/pico-sdk/src/rp2_common/pico_i2c_slave;C:/pico/pico-sdk/src/rp2_common/pico_async_context;C:/pico/pico-sdk/src/rp2_common/pico_btstack;C:/pico/pico-sdk/src/rp2_common/pico_cyw43_driver;C:/pico/pico-sdk/src/rp2_common/pico_lwip/tools;C:/pico/pico-sdk/src/rp2_common/pico_lwip;C:/pico/pico-sdk/lib/cyw43-driver/src;C:/pico/pico-sdk/src/rp2_common/pico_cyw43_arch;C:/pico/pico-sdk/src/rp2_common/pico_mbedtls;C:/pico/pico-sdk/src/rp2_common/pico_time_adapter;C:/pico/pico-sdk/src/rp2_common/pico_crt0;C:/pico/pico-sdk/src/rp2_common/pico_clib_interface;C:/pico/pico-sdk/src/rp2_common/pico_cxx_options;C:/pico/pico-sdk/src/rp2_common/pico_standard_binary_info;C:/pico/pico-sdk/src/rp2_common/pico_standard_link;C:/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration;C:/pico/pico-sdk/src/rp2_common/pico_fix;C:/pico/pico-sdk/src/rp2_common/pico_runtime_init;C:/pico/pico-sdk/src/rp2_common/pico_runtime;C:/pico/pico-sdk/src/rp2_common/pico_stdio;C:/pico/pico-sdk/src/rp2_common/pico_stdlib;C:/pico/my_projects/build/pico-sdk/src/extra_doxygen
 PICO_DOXYGEN_PRE_DEFINES:INTERNAL=PICO_RP2040=1;PICO_RP2350=0
 PICO_GCC_TRIPLE:INTERNAL=arm-none-eabi
 PICO_NO_HARDWARE:INTERNAL=0

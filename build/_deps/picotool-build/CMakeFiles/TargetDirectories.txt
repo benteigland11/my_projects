@@ -129,12 +129,6 @@ C:/pico/my_projects/build/_deps/picotool-build/pico_usb_reset_interface_headers/
 C:/pico/my_projects/build/_deps/picotool-build/pico_usb_reset_interface_headers/CMakeFiles/install.dir
 C:/pico/my_projects/build/_deps/picotool-build/pico_usb_reset_interface_headers/CMakeFiles/install/local.dir
 C:/pico/my_projects/build/_deps/picotool-build/pico_usb_reset_interface_headers/CMakeFiles/install/strip.dir
-C:/pico/my_projects/build/_deps/picotool-build/boot_bootrom_headers/CMakeFiles/edit_cache.dir
-C:/pico/my_projects/build/_deps/picotool-build/boot_bootrom_headers/CMakeFiles/rebuild_cache.dir
-C:/pico/my_projects/build/_deps/picotool-build/boot_bootrom_headers/CMakeFiles/list_install_components.dir
-C:/pico/my_projects/build/_deps/picotool-build/boot_bootrom_headers/CMakeFiles/install.dir
-C:/pico/my_projects/build/_deps/picotool-build/boot_bootrom_headers/CMakeFiles/install/local.dir
-C:/pico/my_projects/build/_deps/picotool-build/boot_bootrom_headers/CMakeFiles/install/strip.dir
 C:/pico/my_projects/build/_deps/picotool-build/pico_platform/CMakeFiles/edit_cache.dir
 C:/pico/my_projects/build/_deps/picotool-build/pico_platform/CMakeFiles/rebuild_cache.dir
 C:/pico/my_projects/build/_deps/picotool-build/pico_platform/CMakeFiles/list_install_components.dir

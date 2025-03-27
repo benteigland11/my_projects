@@ -1,1 +1,0 @@
--I"C:/pico/my_projects/build/_deps/picotool-src/elf2uf2" -I"C:/pico/my_projects/build/_deps/picotool-src/elf" -I"C:/pico/my_projects/build/_deps/picotool-src/errors" -isystem "C:/pico/pico-sdk/src/common/boot_uf2_headers/include"
