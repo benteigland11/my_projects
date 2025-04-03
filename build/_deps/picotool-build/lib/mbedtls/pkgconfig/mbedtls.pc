@@ -1,6 +1,6 @@
-prefix=C:/pico/my_projects/build/_deps
+prefix=/home/benteigland/pico/my_projects/build/_deps
 includedir=${prefix}/include
-libdir=${prefix}/lib
+libdir=${prefix}/lib64
 
 Name: Mbed TLS
 Description: Mbed TLS is a C library that implements cryptographic primitives, X.509 certificate manipulation and the SSL/TLS and DTLS protocols. Its small code footprint makes it suitable for embedded systems.

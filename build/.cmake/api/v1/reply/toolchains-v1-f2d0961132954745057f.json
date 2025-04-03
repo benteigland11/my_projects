@@ -1,0 +1,108 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : {},
+				"path" : "/home/benteigland/pico/toolchain/bin/arm-none-eabi-gcc",
+				"version" : ""
+			},
+			"language" : "ASM",
+			"sourceFileExtensions" : 
+			[
+				"s",
+				"S",
+				"asm"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/home/benteigland/pico/toolchain/lib/gcc/arm-none-eabi/13.2.1/include",
+						"/home/benteigland/pico/toolchain/lib/gcc/arm-none-eabi/13.2.1/include-fixed",
+						"/home/benteigland/pico/toolchain/arm-none-eabi/include"
+					],
+					"linkDirectories" : 
+					[
+						"/home/benteigland/pico/toolchain/lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp",
+						"/home/benteigland/pico/toolchain/arm-none-eabi/lib/thumb/v8-m.main+fp/softfp",
+						"/home/benteigland/pico/toolchain/lib/gcc/arm-none-eabi/13.2.1",
+						"/home/benteigland/pico/toolchain/lib/gcc",
+						"/home/benteigland/pico/toolchain/arm-none-eabi/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : []
+				},
+				"path" : "/home/benteigland/pico/toolchain/bin/arm-none-eabi-gcc",
+				"version" : "13.2.1"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/home/benteigland/pico/toolchain/arm-none-eabi/include/c++/13.2.1",
+						"/home/benteigland/pico/toolchain/arm-none-eabi/include/c++/13.2.1/arm-none-eabi/thumb/v8-m.main+fp/softfp",
+						"/home/benteigland/pico/toolchain/arm-none-eabi/include/c++/13.2.1/backward",
+						"/home/benteigland/pico/toolchain/lib/gcc/arm-none-eabi/13.2.1/include",
+						"/home/benteigland/pico/toolchain/lib/gcc/arm-none-eabi/13.2.1/include-fixed",
+						"/home/benteigland/pico/toolchain/arm-none-eabi/include"
+					],
+					"linkDirectories" : 
+					[
+						"/home/benteigland/pico/toolchain/lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp",
+						"/home/benteigland/pico/toolchain/arm-none-eabi/lib/thumb/v8-m.main+fp/softfp",
+						"/home/benteigland/pico/toolchain/lib/gcc/arm-none-eabi/13.2.1",
+						"/home/benteigland/pico/toolchain/lib/gcc",
+						"/home/benteigland/pico/toolchain/arm-none-eabi/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : []
+				},
+				"path" : "/home/benteigland/pico/toolchain/bin/arm-none-eabi-g++",
+				"version" : "13.2.1"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm",
+				"ccm",
+				"cxxm",
+				"c++m"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

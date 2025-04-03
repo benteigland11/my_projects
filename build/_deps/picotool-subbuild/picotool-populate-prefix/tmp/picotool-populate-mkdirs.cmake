@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "C:/pico/my_projects/build/_deps/picotool-src"
-  "C:/pico/my_projects/build/_deps/picotool-build"
-  "C:/pico/my_projects/build/_deps/picotool-subbuild/picotool-populate-prefix"
-  "C:/pico/my_projects/build/_deps/picotool-subbuild/picotool-populate-prefix/tmp"
-  "C:/pico/my_projects/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp"
-  "C:/pico/my_projects/build/_deps/picotool-subbuild/picotool-populate-prefix/src"
-  "C:/pico/my_projects/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp"
+  "/home/benteigland/pico/my_projects/build/_deps/picotool-src"
+  "/home/benteigland/pico/my_projects/build/_deps/picotool-build"
+  "/home/benteigland/pico/my_projects/build/_deps/picotool-subbuild/picotool-populate-prefix"
+  "/home/benteigland/pico/my_projects/build/_deps/picotool-subbuild/picotool-populate-prefix/tmp"
+  "/home/benteigland/pico/my_projects/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp"
+  "/home/benteigland/pico/my_projects/build/_deps/picotool-subbuild/picotool-populate-prefix/src"
+  "/home/benteigland/pico/my_projects/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/pico/my_projects/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/benteigland/pico/my_projects/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/pico/my_projects/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/benteigland/pico/my_projects/build/_deps/picotool-subbuild/picotool-populate-prefix/src/picotool-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

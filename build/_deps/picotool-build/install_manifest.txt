@@ -1,5 +1,5 @@
-C:/pico/my_projects/build/_deps/picotool/picotool.exe
-C:/pico/my_projects/build/_deps/picotool/picotoolTargets.cmake
-C:/pico/my_projects/build/_deps/picotool/picotoolTargets-release.cmake
-C:/pico/my_projects/build/_deps/picotool/picotoolConfig.cmake
-C:/pico/my_projects/build/_deps/picotool/picotoolConfigVersion.cmake
+/home/benteigland/pico/my_projects/build/_deps/picotool/picotool
+/home/benteigland/pico/my_projects/build/_deps/picotool/picotoolTargets.cmake
+/home/benteigland/pico/my_projects/build/_deps/picotool/picotoolTargets-release.cmake
+/home/benteigland/pico/my_projects/build/_deps/picotool/picotoolConfig.cmake
+/home/benteigland/pico/my_projects/build/_deps/picotool/picotoolConfigVersion.cmake

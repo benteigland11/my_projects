@@ -1,6 +1,5 @@
 #include "SerialMenu.h"   // Our own header
 #include "StepperMotor.h" // To call motor control functions
-#include "SDCardManager.h"// To call SD card functions
 
 #include <iostream>
 #include <cstdio>         // For PICO_ERROR_TIMEOUT if checking input here
@@ -25,22 +24,7 @@ void menu_display() {
  * @brief Placeholder function that now triggers SD card loading.
  */
 void load_simulation_placeholder() { // Renaming this later might be clearer, e.g., menu_action_load_sim
-    std::cout << "\nAttempting to load profile from SD card..." << std::endl;
-    // Attempt to load the profile from the default filename in the root directory
-    int points_loaded = sd_load_flight_profile("/flight_profile.csv");
-
-    if (points_loaded > 0) {
-        // Success (at least some points loaded)
-        printf("Load successful. %d data points ready.\n", points_loaded);
-    } else if (points_loaded == 0) {
-        // File might have been opened but no valid data found between markers
-         printf("Load complete, but 0 data points were loaded between Launch and Apogee markers.\n");
-    }
-    else {
-        // Critical error (points_loaded == -1)
-        printf("Load failed. Check SD card connection, formatting, and file presence/name.\n");
-    }
-    menu_display(); // Show menu again after the load attempt
+    
 }
 
 /**
@@ -50,13 +34,6 @@ void run_simulation_placeholder() {
     // Future implementation: Check if data is loaded (sd_get_data_count() > 0)
     // and then use the data points from SDCardManager (sd_get_data_point)
     // to control the motor over time.
-    std::cout << "[Placeholder] Running simulation... (Functionality TBD)" << std::endl;
-    int count = sd_get_data_count();
-    if (count > 0) {
-        printf("  (Simulation would use the %d loaded data points)\n", count);
-    } else {
-        printf("  (No data loaded. Please use 'l' to load data first.)\n");
-    }
     menu_display(); // Show menu again
 }
 

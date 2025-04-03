@@ -7,7 +7,6 @@
 // Include our module headers
 #include "StepperMotor.h"
 #include "SerialMenu.h"
-#include "SDCardManager.h" // Include the SD card manager
 
 // --- Configuration ---
 // How often the main loop checks motor state and input (milliseconds)
@@ -49,22 +48,6 @@ void system_setup() {
     // Initialize our modules
     motor_init(); // Initializes motor GPIO and state
 
-    // Initialize SD card system AFTER other peripherals if sharing SPI pins (not currently)
-    if (!sd_init()) {
-         // Critical failure: SD Card could not be initialized.
-         // Halt execution or indicate error state prominently.
-         printf("**************************************\n");
-         printf("FATAL: SD Card Initialization Failed!\n");
-         printf("System Halted.\n");
-         printf("**************************************\n");
-         // Infinite loop with rapid LED blink to indicate fatal error
-         while(true) {
-            gpio_put(PICO_DEFAULT_LED_PIN, 1);
-            sleep_ms(100);
-            gpio_put(PICO_DEFAULT_LED_PIN, 0);
-            sleep_ms(100);
-         }
-    }
     // SerialMenu doesn't require explicit init currently
 
     gpio_put(PICO_DEFAULT_LED_PIN, 0); // Turn LED off after successful init
