@@ -130,57 +130,96 @@ void menu_sd_read_test() {
  * @brief Placeholder function - will load data from SD card later.
  */
 void menu_load_simulation_from_sd_to_flash() {
-    const char* sim_filename = "TestFlight1.csv"; // Or your filename
+    std::cout << "\n--- Load Simulation File ---" << std::endl;
 
-    std::cout << "\nAttempting to load '" << sim_filename << "' from SD to Flash..." << std::endl;
+    if (!sd_is_mounted()) {
+         std::cout << "Error: SD Card not mounted. Initialize with 'i' first." << std::endl;
+         menu_display();
+         return;
+    }
 
-    if (!sd_is_mounted()) { /* ... SD not mounted error ... */ menu_display(); return; }
-    if (!store_openrocket_to_flash(sim_filename)) { /* ... store error ... */ menu_display(); return; }
-    std::cout << "Successfully stored '" << sim_filename << "' to flash." << std::endl;
+    // --- Step 1: List CSV Files ---
+    std::vector<std::string> csv_files = sd_list_files("", ".csv"); // Scan root for .csv
 
-    // --- Read back from Flash ---
+    if (csv_files.empty()) {
+        std::cout << "Error: No .csv files found in the root directory." << std::endl;
+        menu_display();
+        return;
+    }
+
+    std::cout << "Available CSV files:" << std::endl;
+    for (size_t i = 0; i < csv_files.size(); ++i) {
+        // Print numbered list (starting from 1 for user)
+        printf("  %d: %s\n", (int)(i + 1), csv_files[i].c_str());
+    }
+
+    // --- Step 2: Get User Selection ---
+    int choice = -1;
+    std::string selected_filename;
+    while(true) {
+        choice = menu_read_int("Enter the number of the file to load: ");
+        // Validate choice (adjust for 0-based index)
+        if (choice > 0 && (size_t)choice <= csv_files.size()) {
+            selected_filename = csv_files[choice - 1]; // Get filename from vector
+            printf("Selected file: %s\n", selected_filename.c_str());
+            break; // Valid choice, exit loop
+        } else {
+            std::cout << "Invalid choice. Please enter a number between 1 and " << csv_files.size() << "." << std::endl;
+        }
+    }
+
+    // --- Step 3: Store selected file to Flash ---
+     std::cout << "Attempting to load '" << selected_filename << "' from SD to Flash..." << std::endl;
+    if (!store_openrocket_to_flash(selected_filename.c_str())) { // Use selected filename
+        std::cout << "FAILED to store '" << selected_filename << "' to flash. Aborting load." << std::endl;
+        menu_display();
+        return;
+    }
+     std::cout << "Successfully stored '" << selected_filename << "' to flash." << std::endl;
+
+
+    // --- Step 4: Read back from Flash ---
     size_t stored_size = get_stored_data_size_from_flash();
-    if (stored_size == 0) { /* ... read size error ... */ menu_display(); return; }
+    if (stored_size == 0) { /* ... error handling ... */ menu_display(); return; }
     std::cout << "DEBUG: Stored size reported by header: " << stored_size << " bytes." << std::endl;
 
     char* data_buffer = (char*)malloc(stored_size);
-    if (!data_buffer) { /* ... malloc error ... */ menu_display(); return; }
+    if (!data_buffer) { /* ... error handling ... */ menu_display(); return; }
 
     int bytes_read = read_openrocket_from_flash(data_buffer, stored_size);
     std::cout << "DEBUG: Bytes actually read from flash: " << bytes_read << std::endl;
-    if (bytes_read <= 0 || (size_t)bytes_read != stored_size) { /* ... read error ... */ free(data_buffer); menu_display(); return; }
+    if (bytes_read <= 0 || (size_t)bytes_read != stored_size) { /* ... error handling ... */ free(data_buffer); menu_display(); return; }
 
-    // --- Parse the data ---
+
+    // --- Step 5: Parse the data ---
     std::cout << "DEBUG: Calling parser..." << std::endl;
     bool parse_success = parse_openrocket_data(data_buffer, bytes_read);
     std::cout << "DEBUG: Parser returned: " << (parse_success ? "true" : "false") << std::endl;
     size_t point_count_after_parse = get_parsed_data_count();
     std::cout << "DEBUG: Point count *after* parsing: " << point_count_after_parse << std::endl;
-    free(data_buffer); // Free buffer now we're done with it for parsing
+    free(data_buffer); // Free buffer now
 
     if (!parse_success || point_count_after_parse == 0) { /* ... parse error/warning ... */ menu_display(); return; }
 
-    // --- *** GET RADIUS FROM USER *** ---
+
+    // --- Step 6: Get Radius ---
     float radius_cm = 0.0f;
-    while(radius_cm <= 0.0f) { // Loop until valid input
-        radius_cm = menu_read_float("Enter radius (cm, must be > 0): "); // Call the new helper
-        if (radius_cm <= 0.0f) {
-             std::cout << "Invalid radius. Please try again." << std::endl;
-        }
+    while(radius_cm <= 0.0f) {
+        radius_cm = menu_read_float("Enter radius (cm, must be > 0): ");
+        if (radius_cm <= 0.0f) { std::cout << "Invalid radius. Please try again." << std::endl; }
     }
-    // --- End Get Radius ---
-
     float radius_m = radius_cm / 100.0f;
-    printf("DEBUG: Using radius: %.4f m\n", radius_m); // DEBUG using meters
+    printf("DEBUG: Using radius: %.4f m\n", radius_m);
 
-    // --- Calculate PPS ---
+
+    // --- Step 7: Calculate PPS ---
     std::cout << "DEBUG: Calling PPS calculator..." << std::endl;
     bool calc_success = calculate_pps_for_parsed_data(radius_m);
     std::cout << "DEBUG: PPS calculator returned: " << (calc_success ? "true" : "false") << std::endl;
     if (!calc_success) { printf("Warning: Failed to calculate target PPS values.\n"); }
 
-     size_t final_point_count = get_parsed_data_count();
-     std::cout << "Load process complete. Final parsed point count: " << final_point_count << std::endl;
+    size_t final_point_count = get_parsed_data_count();
+    std::cout << "Load process complete for '" << selected_filename << "'. Final parsed point count: " << final_point_count << std::endl;
 
     menu_display(); // Show menu again
 }
@@ -315,7 +354,55 @@ void menu_handle_input(char cmd) {
     }
      std::cout.flush(); // Ensure output buffer is flushed
 }
+// --- NEW HELPER FUNCTION for Reading Integer ---
+/**
+ * @brief Reads an integer from the serial input.
+ * NOTE: This is a BLOCKING function.
+ * @param prompt The message to display to the user.
+ * @return The integer value entered, or -1 on error/non-numeric input.
+ */
+static int menu_read_int(const char* prompt) {
+    char buffer[16];
+    int index = 0;
+    buffer[0] = '\0';
 
+    std::cout << std::endl << prompt;
+    std::cout.flush();
+
+    while (index < sizeof(buffer) - 1) {
+        int c = getchar(); // Blocking read
+
+        if (c == PICO_ERROR_TIMEOUT || c == PICO_ERROR_NONE) continue;
+
+        char ch = (char)c;
+
+        if (ch == '\r' || ch == '\n') {
+            std::cout << std::endl;
+            break;
+        }
+        else if ((ch == '\b' || ch == 127) && index > 0) {
+            index--;
+            buffer[index] = '\0';
+            std::cout << "\b \b";
+            std::cout.flush();
+        }
+        // Only allow digits (and potentially '-' at the start if needed, but not for menu index)
+        else if (isdigit(ch)) {
+             if (isprint(ch)) {
+                buffer[index++] = ch;
+                buffer[index] = '\0';
+                std::cout << ch;
+                std::cout.flush();
+             }
+        }
+    }
+
+    if (index == 0) return -1; // No input
+
+    int value = atoi(buffer); // Convert string to integer
+    printf("Input converted to: %d\n", value); // Debug print
+    return value;
+}
 /**
  * @brief Reads a floating-point number from the serial input.
  * NOTE: This is a BLOCKING function. It waits for user input.
@@ -369,3 +456,4 @@ static float menu_read_float(const char* prompt) {
     printf("Input converted to: %.3f\n", value); // Debug print
     return value;
 }
+

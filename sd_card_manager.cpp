@@ -1,9 +1,12 @@
 #include "sd_card_manager.h"
-#include "tf_card.h" // Includes hardware specifics and FatFs diskio mapping
-#include "ff.h"      // FatFs main header
-#include "pico/stdlib.h" // For printf, sleep_ms etc.
+#include "tf_card.h"
+#include "ff.h" // <--- Include FatFs header directly
+#include "pico/stdlib.h"
 #include <stdio.h>
-#include <string.h> // For memcpy
+#include <string.h>
+#include <vector> // <--- Include vector
+#include <string> // <--- Include string
+#include <algorithm> // for std::transform
 
 static FATFS fs;
 static bool is_mounted = false;
@@ -161,4 +164,69 @@ long sd_get_file_size(const char* filename) {
     }
 
     return (long)fno.fsize;
+}
+
+static bool ends_with_ignore_case(const std::string& mainStr, const std::string& toMatch) {
+    if (mainStr.length() < toMatch.length()) {
+        return false;
+    }
+    return std::equal(toMatch.rbegin(), toMatch.rend(), mainStr.rbegin(),
+                      [](unsigned char a, unsigned char b) {
+                          return std::tolower(a) == std::tolower(b);
+                      });
+}
+
+
+std::vector<std::string> sd_list_files(const char* path, const char* extension) {
+    std::vector<std::string> file_list;
+    FRESULT fr;
+    DIR dir;
+    FILINFO fno;
+
+    if (!sd_is_mounted()) {
+        printf("Error (sd_list_files): SD card not mounted.\n");
+        return file_list; // Return empty list
+    }
+
+    fr = f_opendir(&dir, path); // Open the directory [cite: uploaded:my_projects/fatfs/ff.h has f_opendir]
+    if (fr != FR_OK) {
+        printf("Error (sd_list_files): Failed to open directory '%s' (%d)\n", path, fr);
+        return file_list;
+    }
+
+    printf("Scanning directory '%s' for '%s' files...\n", path, extension);
+
+    while (true) {
+        fr = f_readdir(&dir, &fno); // Read a directory item [cite: uploaded:my_projects/fatfs/ff.h has f_readdir]
+        if (fr != FR_OK || fno.fname[0] == 0) {
+            // Break on error or end of directory
+            if (fr != FR_OK && fr != FR_NO_FILE) { // FR_NO_FILE just means end of dir
+                 printf("Error (sd_list_files): Failed to read directory (%d)\n", fr);
+            }
+            break;
+        }
+
+        // Skip directories and hidden files (optional)
+        if (fno.fattrib & (AM_DIR | AM_HID)) {
+            continue;
+        }
+
+        // Check if the filename ends with the specified extension (case-insensitive)
+        std::string current_filename = fno.fname;
+        std::string ext_lower = extension;
+        // Simple case-insensitive check for extension:
+        if (ends_with_ignore_case(current_filename, ext_lower))
+        {
+            file_list.push_back(current_filename);
+            // printf("  Found: %s\n", current_filename.c_str()); // Optional debug print
+        }
+    }
+
+    fr = f_closedir(&dir); // Close the directory [cite: uploaded:my_projects/fatfs/ff.h has f_closedir]
+    if (fr != FR_OK) {
+         printf("Warning (sd_list_files): Failed to close directory (%d)\n", fr);
+    }
+
+    printf("Scan complete. Found %u matching files.\n", (unsigned int)file_list.size());
+    return file_list;
 }

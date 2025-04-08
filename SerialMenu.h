@@ -39,5 +39,6 @@ void menu_sd_show_status();
 void load_simulation_placeholder(); // Keep placeholder for now
 void run_simulation_placeholder();  // Keep placeholder for now
 static float menu_read_float(const char* prompt);
+static int menu_read_int(const char* prompt);
 
 #endif // SERIAL_MENU_H
