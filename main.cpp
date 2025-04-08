@@ -7,6 +7,7 @@
 // Include our module headers
 #include "StepperMotor.h"
 #include "SerialMenu.h"
+#include "sd_card_manager.h" // Include SD manager header (though init is now manual)
 
 // --- Configuration ---
 // How often the main loop checks motor state and input (milliseconds)
@@ -35,7 +36,6 @@ void system_setup() {
     stdio_init_all(); // Initialize chosen stdio (USB in this case)
 
     // Optional: Wait a moment for serial connection to establish
-    // Useful if you want to see the very first messages.
     #if !PICO_STDIO_USB_WAIT_FOR_CONNECTION
     sleep_ms(2000); // Wait 2 seconds if not automatically waiting
     #endif
@@ -50,6 +50,11 @@ void system_setup() {
 
     // SerialMenu doesn't require explicit init currently
 
+    // *** SD Card initialization is now handled manually via the SerialMenu ***
+    // *** Do NOT call sd_init() here anymore ***
+    std::cout << "SD Card: Use Serial Menu ('i' command) to initialize." << std::endl;
+
+
     gpio_put(PICO_DEFAULT_LED_PIN, 0); // Turn LED off after successful init
     std::cout << "--- System Initialization Complete ---" << std::endl;
 }
@@ -58,14 +63,12 @@ void system_setup() {
  * @brief Main application: Initializes system and runs the main loop.
  */
 int main() {
-    system_setup();   // Initialize everything
+    system_setup();   // Initialize everything (except SD card now)
     menu_display();   // Show the menu initially
 
     uint64_t last_motor_update_time = time_us_64();
 
     // --- Main Execution Loop ---
-    // This structure is common in embedded systems:
-    // check inputs, update state machines/logic, update outputs.
     while (true) {
         // 1. Check for Serial Input (Non-Blocking Event Handling)
         int c = getchar_timeout_us(0); // Check for character, return PICO_ERROR_TIMEOUT if none
@@ -79,36 +82,29 @@ int main() {
              std::cout.flush();
 
              // Handle the command using the menu module's logic
-             menu_handle_input((char)c);
+             menu_handle_input((char)c); // This now handles SD commands too
         }
 
         // 2. Update Motor State Periodically (Time-Based Task)
-        // This runs regardless of user input to ensure smooth motor ramps.
         uint64_t now = time_us_64();
         MotorState currentMotorState = motor_get_state(); // Get state from module
 
-        // Only call update function if motor is supposed to be moving/changing state
         if ( currentMotorState != MOTOR_STOPPED ) {
-             // Check if enough time has passed since the last motor speed update
              if (now - last_motor_update_time >= (uint64_t)MAIN_LOOP_UPDATE_INTERVAL_MS * 1000) {
-                 motor_update_state(); // Tell motor module to update its speed/state
-                 last_motor_update_time = now; // Reset the timer for the next update
+                 motor_update_state();
+                 last_motor_update_time = now;
             }
         } else {
-            // If motor is stopped, keep resetting the timer
-            // Prevents a large time difference accumulating while stopped.
             last_motor_update_time = now;
         }
 
         // 3. Update Onboard LED (Simple Output/Status Indicator)
-        // LED is ON if motor is doing anything (Accelerating, Running, Decelerating)
+        // LED is ON if motor is doing anything
         gpio_put(PICO_DEFAULT_LED_PIN, (currentMotorState != MOTOR_STOPPED));
 
         // 4. Small Delay (Yield CPU Time)
-        // Prevent the loop from consuming 100% CPU when idle.
-        // Keep this short as motor step timing relies on its hardware timer.
-        sleep_us(100); // Sleep for 100 microseconds
+        sleep_us(100);
     }
 
-    return 0; // Should never reach here in an embedded loop
+    return 0; // Should never reach here
 }

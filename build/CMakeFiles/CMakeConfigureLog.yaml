@@ -135,8 +135,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/benteigland/pico/my_projects/build/CMakeFiles/CMakeScratch/TryCompile-od9jWb"
-      binary: "/home/benteigland/pico/my_projects/build/CMakeFiles/CMakeScratch/TryCompile-od9jWb"
+      source: "/home/benteigland/pico/my_projects/build/CMakeFiles/CMakeScratch/TryCompile-AYvGM8"
+      binary: "/home/benteigland/pico/my_projects/build/CMakeFiles/CMakeScratch/TryCompile-AYvGM8"
     cmakeVariables:
       CMAKE_C_FLAGS: "-mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse"
       CMAKE_C_FLAGS_DEBUG: "-Og -g"
@@ -146,10 +146,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/benteigland/pico/my_projects/build/CMakeFiles/CMakeScratch/TryCompile-od9jWb'
+        Change Dir: '/home/benteigland/pico/my_projects/build/CMakeFiles/CMakeScratch/TryCompile-AYvGM8'
         
-        Run Build Command(s): /usr/bin/ninja-build -v cmTC_763bf
-        [1/2] /home/benteigland/pico/toolchain/bin/arm-none-eabi-gcc   -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse    -v -o CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/ninja-build -v cmTC_d3c95
+        [1/2] /home/benteigland/pico/toolchain/bin/arm-none-eabi-gcc   -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse    -v -o CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/home/benteigland/pico/toolchain/bin/arm-none-eabi-gcc
         Target: arm-none-eabi
@@ -157,8 +157,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_763bf.dir/'
-         /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1 -quiet -v -imultilib thumb/v8-m.main+fp/softfp -iprefix /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot /home/benteigland/pico/toolchain/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_763bf.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m33 -mthumb -mfloat-abi=softfp -mcmse -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -version -o /tmp/ccv12fcW.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_d3c95.dir/'
+         /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1 -quiet -v -imultilib thumb/v8-m.main+fp/softfp -iprefix /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot /home/benteigland/pico/toolchain/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d3c95.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m33 -mthumb -mfloat-abi=softfp -mcmse -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -version -o /tmp/ccajVR40.s
         GNU C17 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) version 13.2.1 20231009 (arm-none-eabi)
         	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44), GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -175,13 +175,13 @@ events:
          /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: 3af492648c23d64f81488ff0afc525a8
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_763bf.dir/'
-         /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as -v -march=armv8-m.main+dsp+fp -mfloat-abi=softfp -meabi=5 -o CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.o /tmp/ccv12fcW.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_d3c95.dir/'
+         /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as -v -march=armv8-m.main+dsp+fp -mfloat-abi=softfp -meabi=5 -o CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.o /tmp/ccajVR40.s
         GNU assembler version 2.41.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 2.41.0.20231009
         COMPILER_PATH=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/:/home/benteigland/pico/toolchain/bin/../libexec/gcc/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/:/home/benteigland/pico/toolchain/bin/../lib/gcc/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/:/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.'
-        [2/2] : && /home/benteigland/pico/toolchain/bin/arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.o -o cmTC_763bf.elf   && :
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /home/benteigland/pico/toolchain/bin/arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.o -o cmTC_d3c95.elf   && :
         Using built-in specs.
         COLLECT_GCC=/home/benteigland/pico/toolchain/bin/arm-none-eabi-gcc
         COLLECT_LTO_WRAPPER=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper
@@ -192,10 +192,10 @@ events:
         gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 
         COMPILER_PATH=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/:/home/benteigland/pico/toolchain/bin/../libexec/gcc/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/:/home/benteigland/pico/toolchain/bin/../lib/gcc/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/:/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-nostdlib' '-v' '-o' 'cmTC_763bf.elf' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'cmTC_763bf.elf.'
-         /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2 -plugin /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so -plugin-opt=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbdWLbJ.res --sysroot=/home/benteigland/pico/toolchain/bin/../arm-none-eabi -X -o cmTC_763bf.elf -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1 -L/home/benteigland/pico/toolchain/bin/../lib/gcc -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib -L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.o
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-nostdlib' '-v' '-o' 'cmTC_d3c95.elf' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'cmTC_d3c95.elf.'
+         /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2 -plugin /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so -plugin-opt=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cca8TLZX.res --sysroot=/home/benteigland/pico/toolchain/bin/../arm-none-eabi -X -o cmTC_d3c95.elf -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1 -L/home/benteigland/pico/toolchain/bin/../lib/gcc -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib -L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.o
         /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 00008000
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-nostdlib' '-v' '-o' 'cmTC_763bf.elf' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'cmTC_763bf.elf.'
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-nostdlib' '-v' '-o' 'cmTC_d3c95.elf' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'cmTC_d3c95.elf.'
         
       exitCode: 0
   -
@@ -227,10 +227,10 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(arm-none-eabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/benteigland/pico/my_projects/build/CMakeFiles/CMakeScratch/TryCompile-od9jWb']
+        ignore line: [Change Dir: '/home/benteigland/pico/my_projects/build/CMakeFiles/CMakeScratch/TryCompile-AYvGM8']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/ninja-build -v cmTC_763bf]
-        ignore line: [[1/2] /home/benteigland/pico/toolchain/bin/arm-none-eabi-gcc   -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse    -v -o CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/ninja-build -v cmTC_d3c95]
+        ignore line: [[1/2] /home/benteigland/pico/toolchain/bin/arm-none-eabi-gcc   -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse    -v -o CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/benteigland/pico/toolchain/bin/arm-none-eabi-gcc]
         ignore line: [Target: arm-none-eabi]
@@ -238,8 +238,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_763bf.dir/']
-        ignore line: [ /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1 -quiet -v -imultilib thumb/v8-m.main+fp/softfp -iprefix /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot /home/benteigland/pico/toolchain/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_763bf.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m33 -mthumb -mfloat-abi=softfp -mcmse -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -version -o /tmp/ccv12fcW.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_d3c95.dir/']
+        ignore line: [ /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1 -quiet -v -imultilib thumb/v8-m.main+fp/softfp -iprefix /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot /home/benteigland/pico/toolchain/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d3c95.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m33 -mthumb -mfloat-abi=softfp -mcmse -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -version -o /tmp/ccajVR40.s]
         ignore line: [GNU C17 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) version 13.2.1 20231009 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44)  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -256,13 +256,13 @@ events:
         ignore line: [ /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 3af492648c23d64f81488ff0afc525a8]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_763bf.dir/']
-        ignore line: [ /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as -v -march=armv8-m.main+dsp+fp -mfloat-abi=softfp -meabi=5 -o CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.o /tmp/ccv12fcW.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_d3c95.dir/']
+        ignore line: [ /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as -v -march=armv8-m.main+dsp+fp -mfloat-abi=softfp -meabi=5 -o CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.o /tmp/ccajVR40.s]
         ignore line: [GNU assembler version 2.41.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 2.41.0.20231009]
         ignore line: [COMPILER_PATH=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/:/home/benteigland/pico/toolchain/bin/../libexec/gcc/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/:/home/benteigland/pico/toolchain/bin/../lib/gcc/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/:/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] : && /home/benteigland/pico/toolchain/bin/arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.o -o cmTC_763bf.elf   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /home/benteigland/pico/toolchain/bin/arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.o -o cmTC_d3c95.elf   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/benteigland/pico/toolchain/bin/arm-none-eabi-gcc]
         ignore line: [COLLECT_LTO_WRAPPER=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper]
@@ -273,17 +273,17 @@ events:
         ignore line: [gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) ]
         ignore line: [COMPILER_PATH=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/:/home/benteigland/pico/toolchain/bin/../libexec/gcc/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/:/home/benteigland/pico/toolchain/bin/../lib/gcc/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/:/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-nostdlib' '-v' '-o' 'cmTC_763bf.elf' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'cmTC_763bf.elf.']
-        link line: [ /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2 -plugin /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so -plugin-opt=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbdWLbJ.res --sysroot=/home/benteigland/pico/toolchain/bin/../arm-none-eabi -X -o cmTC_763bf.elf -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1 -L/home/benteigland/pico/toolchain/bin/../lib/gcc -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib -L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-nostdlib' '-v' '-o' 'cmTC_d3c95.elf' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'cmTC_d3c95.elf.']
+        link line: [ /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2 -plugin /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so -plugin-opt=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cca8TLZX.res --sysroot=/home/benteigland/pico/toolchain/bin/../arm-none-eabi -X -o cmTC_d3c95.elf -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1 -L/home/benteigland/pico/toolchain/bin/../lib/gcc -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib -L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.o]
           arg [/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccbdWLbJ.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cca8TLZX.res] ==> ignore
           arg [--sysroot=/home/benteigland/pico/toolchain/bin/../arm-none-eabi] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_763bf.elf] ==> ignore
+          arg [cmTC_d3c95.elf] ==> ignore
           arg [-L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp] ==> dir [/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp]
           arg [-L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp] ==> dir [/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp]
           arg [-L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp] ==> dir [/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp]
@@ -292,7 +292,7 @@ events:
           arg [-L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib] ==> dir [/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib]
           arg [-L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib] ==> dir [/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib]
           arg [--build-id=none] ==> ignore
-          arg [CMakeFiles/cmTC_763bf.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_d3c95.dir/CMakeCCompilerABI.c.o] ==> ignore
         collapse library dir [/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp] ==> [/home/benteigland/pico/toolchain/lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp]
         collapse library dir [/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp] ==> [/home/benteigland/pico/toolchain/arm-none-eabi/lib/thumb/v8-m.main+fp/softfp]
         collapse library dir [/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp] ==> [/home/benteigland/pico/toolchain/arm-none-eabi/lib/thumb/v8-m.main+fp/softfp]
@@ -315,8 +315,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/benteigland/pico/my_projects/build/CMakeFiles/CMakeScratch/TryCompile-VDD53l"
-      binary: "/home/benteigland/pico/my_projects/build/CMakeFiles/CMakeScratch/TryCompile-VDD53l"
+      source: "/home/benteigland/pico/my_projects/build/CMakeFiles/CMakeScratch/TryCompile-rfRV9s"
+      binary: "/home/benteigland/pico/my_projects/build/CMakeFiles/CMakeScratch/TryCompile-rfRV9s"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse"
       CMAKE_CXX_FLAGS_DEBUG: "-Og -g"
@@ -326,10 +326,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/benteigland/pico/my_projects/build/CMakeFiles/CMakeScratch/TryCompile-VDD53l'
+        Change Dir: '/home/benteigland/pico/my_projects/build/CMakeFiles/CMakeScratch/TryCompile-rfRV9s'
         
-        Run Build Command(s): /usr/bin/ninja-build -v cmTC_7f2dc
-        [1/2] /home/benteigland/pico/toolchain/bin/arm-none-eabi-g++   -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse    -v -o CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/ninja-build -v cmTC_41f87
+        [1/2] /home/benteigland/pico/toolchain/bin/arm-none-eabi-g++   -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse    -v -o CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/home/benteigland/pico/toolchain/bin/arm-none-eabi-g++
         Target: arm-none-eabi
@@ -337,8 +337,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_7f2dc.dir/'
-         /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1plus -quiet -v -imultilib thumb/v8-m.main+fp/softfp -iprefix /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot /home/benteigland/pico/toolchain/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7f2dc.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m33 -mthumb -mfloat-abi=softfp -mcmse -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -version -o /tmp/ccUt5eB6.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_41f87.dir/'
+         /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1plus -quiet -v -imultilib thumb/v8-m.main+fp/softfp -iprefix /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot /home/benteigland/pico/toolchain/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_41f87.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m33 -mthumb -mfloat-abi=softfp -mcmse -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -version -o /tmp/ccxQPOEk.s
         GNU C++17 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) version 13.2.1 20231009 (arm-none-eabi)
         	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44), GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -361,13 +361,13 @@ events:
          /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: c5cd373d816abe4682fcfe3b0ef0c0c5
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_7f2dc.dir/'
-         /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as -v -march=armv8-m.main+dsp+fp -mfloat-abi=softfp -meabi=5 -o CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccUt5eB6.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_41f87.dir/'
+         /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as -v -march=armv8-m.main+dsp+fp -mfloat-abi=softfp -meabi=5 -o CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccxQPOEk.s
         GNU assembler version 2.41.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 2.41.0.20231009
         COMPILER_PATH=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/:/home/benteigland/pico/toolchain/bin/../libexec/gcc/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/:/home/benteigland/pico/toolchain/bin/../lib/gcc/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/:/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] : && /home/benteigland/pico/toolchain/bin/arm-none-eabi-g++ -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_7f2dc.elf   && :
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /home/benteigland/pico/toolchain/bin/arm-none-eabi-g++ -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse -Wl,--build-id=none -nostdlib -v CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_41f87.elf   && :
         Using built-in specs.
         COLLECT_GCC=/home/benteigland/pico/toolchain/bin/arm-none-eabi-g++
         COLLECT_LTO_WRAPPER=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper
@@ -378,10 +378,10 @@ events:
         gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 
         COMPILER_PATH=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/:/home/benteigland/pico/toolchain/bin/../libexec/gcc/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/:/home/benteigland/pico/toolchain/bin/../lib/gcc/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/:/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-nostdlib' '-v' '-o' 'cmTC_7f2dc.elf' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'cmTC_7f2dc.elf.'
-         /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2 -plugin /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so -plugin-opt=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc8d15I3.res --sysroot=/home/benteigland/pico/toolchain/bin/../arm-none-eabi -X -o cmTC_7f2dc.elf -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1 -L/home/benteigland/pico/toolchain/bin/../lib/gcc -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib -L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.o
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-nostdlib' '-v' '-o' 'cmTC_41f87.elf' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'cmTC_41f87.elf.'
+         /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2 -plugin /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so -plugin-opt=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXiMQkE.res --sysroot=/home/benteigland/pico/toolchain/bin/../arm-none-eabi -X -o cmTC_41f87.elf -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1 -L/home/benteigland/pico/toolchain/bin/../lib/gcc -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib -L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.o
         /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 00008000
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-nostdlib' '-v' '-o' 'cmTC_7f2dc.elf' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'cmTC_7f2dc.elf.'
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-nostdlib' '-v' '-o' 'cmTC_41f87.elf' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'cmTC_41f87.elf.'
         
       exitCode: 0
   -
@@ -419,10 +419,10 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(arm-none-eabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/benteigland/pico/my_projects/build/CMakeFiles/CMakeScratch/TryCompile-VDD53l']
+        ignore line: [Change Dir: '/home/benteigland/pico/my_projects/build/CMakeFiles/CMakeScratch/TryCompile-rfRV9s']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/ninja-build -v cmTC_7f2dc]
-        ignore line: [[1/2] /home/benteigland/pico/toolchain/bin/arm-none-eabi-g++   -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse    -v -o CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/ninja-build -v cmTC_41f87]
+        ignore line: [[1/2] /home/benteigland/pico/toolchain/bin/arm-none-eabi-g++   -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse    -v -o CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/benteigland/pico/toolchain/bin/arm-none-eabi-g++]
         ignore line: [Target: arm-none-eabi]
@@ -430,8 +430,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_7f2dc.dir/']
-        ignore line: [ /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1plus -quiet -v -imultilib thumb/v8-m.main+fp/softfp -iprefix /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot /home/benteigland/pico/toolchain/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7f2dc.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m33 -mthumb -mfloat-abi=softfp -mcmse -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -version -o /tmp/ccUt5eB6.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_41f87.dir/']
+        ignore line: [ /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1plus -quiet -v -imultilib thumb/v8-m.main+fp/softfp -iprefix /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot /home/benteigland/pico/toolchain/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_41f87.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m33 -mthumb -mfloat-abi=softfp -mcmse -mlibarch=armv8-m.main+dsp+fp -march=armv8-m.main+dsp+fp -version -o /tmp/ccxQPOEk.s]
         ignore line: [GNU C++17 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) version 13.2.1 20231009 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44)  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -454,13 +454,13 @@ events:
         ignore line: [ /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: c5cd373d816abe4682fcfe3b0ef0c0c5]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_7f2dc.dir/']
-        ignore line: [ /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as -v -march=armv8-m.main+dsp+fp -mfloat-abi=softfp -meabi=5 -o CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccUt5eB6.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_41f87.dir/']
+        ignore line: [ /home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as -v -march=armv8-m.main+dsp+fp -mfloat-abi=softfp -meabi=5 -o CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccxQPOEk.s]
         ignore line: [GNU assembler version 2.41.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 2.41.0.20231009]
         ignore line: [COMPILER_PATH=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/:/home/benteigland/pico/toolchain/bin/../libexec/gcc/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/:/home/benteigland/pico/toolchain/bin/../lib/gcc/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/:/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] : && /home/benteigland/pico/toolchain/bin/arm-none-eabi-g++ -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_7f2dc.elf   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-v' '-o' 'CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /home/benteigland/pico/toolchain/bin/arm-none-eabi-g++ -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse -Wl --build-id=none -nostdlib -v CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_41f87.elf   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/benteigland/pico/toolchain/bin/arm-none-eabi-g++]
         ignore line: [COLLECT_LTO_WRAPPER=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper]
@@ -471,17 +471,17 @@ events:
         ignore line: [gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) ]
         ignore line: [COMPILER_PATH=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/:/home/benteigland/pico/toolchain/bin/../libexec/gcc/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/:/home/benteigland/pico/toolchain/bin/../lib/gcc/:/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/:/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-nostdlib' '-v' '-o' 'cmTC_7f2dc.elf' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'cmTC_7f2dc.elf.']
-        link line: [ /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2 -plugin /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so -plugin-opt=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc8d15I3.res --sysroot=/home/benteigland/pico/toolchain/bin/../arm-none-eabi -X -o cmTC_7f2dc.elf -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1 -L/home/benteigland/pico/toolchain/bin/../lib/gcc -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib -L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m33' '-mthumb'  '-mfloat-abi=softfp' '-mcmse' '-nostdlib' '-v' '-o' 'cmTC_41f87.elf' '-mlibarch=armv8-m.main+dsp+fp' '-march=armv8-m.main+dsp+fp' '-dumpdir' 'cmTC_41f87.elf.']
+        link line: [ /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2 -plugin /home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so -plugin-opt=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXiMQkE.res --sysroot=/home/benteigland/pico/toolchain/bin/../arm-none-eabi -X -o cmTC_41f87.elf -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1 -L/home/benteigland/pico/toolchain/bin/../lib/gcc -L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib -L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.o]
           arg [/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/home/benteigland/pico/toolchain/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/cc8d15I3.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccXiMQkE.res] ==> ignore
           arg [--sysroot=/home/benteigland/pico/toolchain/bin/../arm-none-eabi] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_7f2dc.elf] ==> ignore
+          arg [cmTC_41f87.elf] ==> ignore
           arg [-L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp] ==> dir [/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp]
           arg [-L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp] ==> dir [/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp]
           arg [-L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp] ==> dir [/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp]
@@ -490,7 +490,7 @@ events:
           arg [-L/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib] ==> dir [/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib]
           arg [-L/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib] ==> dir [/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib]
           arg [--build-id=none] ==> ignore
-          arg [CMakeFiles/cmTC_7f2dc.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_41f87.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
         collapse library dir [/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp] ==> [/home/benteigland/pico/toolchain/lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/softfp]
         collapse library dir [/home/benteigland/pico/toolchain/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp] ==> [/home/benteigland/pico/toolchain/arm-none-eabi/lib/thumb/v8-m.main+fp/softfp]
         collapse library dir [/home/benteigland/pico/toolchain/bin/../arm-none-eabi/lib/thumb/v8-m.main+fp/softfp] ==> [/home/benteigland/pico/toolchain/arm-none-eabi/lib/thumb/v8-m.main+fp/softfp]

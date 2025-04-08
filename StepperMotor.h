@@ -6,9 +6,10 @@
 // --- Public Types ---
 enum MotorState {
     MOTOR_STOPPED,
-    MOTOR_ACCELERATING,
-    MOTOR_RUNNING,
-    MOTOR_DECELERATING
+    MOTOR_ACCELERATING, // For test run
+    MOTOR_RUNNING,      // For test run
+    MOTOR_DECELERATING, // For test run
+    MOTOR_SIMULATING    // New state for direct frequency control
 };
 
 // --- Public Function Declarations ---
@@ -20,8 +21,8 @@ enum MotorState {
 void motor_init();
 
 /**
- * @brief Updates the motor's speed and state (handles acceleration/deceleration).
- * Call this periodically in the main loop when the motor is not stopped.
+ * @brief Updates the motor's speed and state (handles acceleration/deceleration for test mode).
+ * Call this periodically in the main loop. In SIMULATING mode, this function does little.
  */
 void motor_update_state();
 
@@ -31,7 +32,7 @@ void motor_update_state();
 void motor_start_test();
 
 /**
- * @brief Stops the motor test sequence (initiates deceleration).
+ * @brief Stops the motor test sequence (initiates deceleration) or stops simulation immediately.
  */
 void motor_stop_test();
 
@@ -46,6 +47,13 @@ MotorState motor_get_state();
  * @return The current PPS value.
  */
 int motor_get_current_pps();
+
+/**
+ * @brief Sets the target rotational frequency for the motor, bypassing accel/decel.
+ * Used for running the simulation profile directly. Puts motor in SIMULATING state.
+ * @param pps Target frequency in pulses per second (Hz). Negative values are treated as 0.
+ */
+void motor_set_target_frequency(float pps);
 
 
 #endif // STEPPER_MOTOR_H

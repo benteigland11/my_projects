@@ -40,8 +40,6 @@
 /home/benteigland/pico/my_projects/build/pico-sdk/src/rp2350/hardware_structs/CMakeFiles/edit_cache.dir
 /home/benteigland/pico/my_projects/build/pico-sdk/src/rp2350/hardware_structs/CMakeFiles/rebuild_cache.dir
 /home/benteigland/pico/my_projects/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir
-/home/benteigland/pico/my_projects/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolForceReconfigure.dir
-/home/benteigland/pico/my_projects/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolBuild.dir
 /home/benteigland/pico/my_projects/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_bin.dir
 /home/benteigland/pico/my_projects/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_library.dir
 /home/benteigland/pico/my_projects/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/edit_cache.dir

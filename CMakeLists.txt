@@ -22,12 +22,13 @@ add_executable(my_project
     main.cpp
     StepperMotor.cpp
     SerialMenu.cpp
+    sd_card_manager.cpp
+    openrocket_parser.cpp
 )
 
 # Include directories for your project source files
 target_include_directories(my_project PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}
-    ${CMAKE_CURRENT_LIST_DIR}/fatfs # Assuming fatfs is a subdirectory
 )
 
 # Enable stdio output over USB VCP (Virtual COM Port)
@@ -43,5 +44,30 @@ target_link_libraries(my_project PRIVATE
     pico_stdlib
     hardware_timer
     hardware_spi
+    pico_fatfs
+    hardware_flash
     # Add other necessary hardware libraries here, e.g. hardware_i2c
 )
+
+if (NOT TARGET pico_fatfs)
+    add_library(pico_fatfs INTERFACE)
+
+    target_sources(pico_fatfs INTERFACE
+        ${CMAKE_CURRENT_LIST_DIR}/fatfs/ff.c
+        ${CMAKE_CURRENT_LIST_DIR}/fatfs/ffsystem.c
+        ${CMAKE_CURRENT_LIST_DIR}/fatfs/ffunicode.c
+        ${CMAKE_CURRENT_LIST_DIR}/tf_card.c
+    )
+
+    target_include_directories(pico_fatfs INTERFACE
+        ${CMAKE_CURRENT_LIST_DIR}
+        ${CMAKE_CURRENT_LIST_DIR}/fatfs
+        ${CMAKE_CURRENT_LIST_DIR}/fatfs/conf
+    )
+
+    target_link_libraries(pico_fatfs INTERFACE
+        pico_stdlib
+        hardware_clocks
+        hardware_spi
+    )
+endif()
