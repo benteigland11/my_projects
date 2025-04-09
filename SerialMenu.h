@@ -1,44 +1,61 @@
 #ifndef SERIAL_MENU_H
 #define SERIAL_MENU_H
 
-/**
- * @brief Displays the command menu to the serial console.
- */
-void menu_display();
+#include "openrocket_parser.h" // [cite: uploaded:my_projects/SerialMenu.h]
+
+// --- Public Types ---
+
+// Define different states for the menu system
+typedef enum {
+    MENU_STATE_MAIN,
+    MENU_STATE_CONFIG
+} MenuSystemState; // [cite: uploaded:my_projects/SerialMenu.h]
+
+
+// --- Public Function Declarations ---
 
 /**
- * @brief Processes a single character command received from the serial console.
+ * @brief Displays the main command menu.
+ */
+void menu_display_main(); // [cite: uploaded:my_projects/SerialMenu.h]
+
+/**
+ * @brief Displays the configuration menu.
+ */
+void menu_display_config(); // [cite: uploaded:my_projects/SerialMenu.h]
+
+/**
+ * @brief Processes a single character command based on the current menu state.
  * @param cmd The character command received.
  */
-void menu_handle_input(char cmd);
+void menu_handle_input(char cmd); // [cite: uploaded:my_projects/SerialMenu.h]
+
 
 // --- SD Card Menu Actions ---
+void menu_sd_init(); // [cite: uploaded:my_projects/SerialMenu.h]
+// void menu_sd_write_test(); // Declaration likely exists [cite: uploaded:my_projects/SerialMenu.h]
+// void menu_sd_read_test(); // Declaration likely exists [cite: uploaded:my_projects/SerialMenu.h]
+void menu_sd_show_status(); // [cite: uploaded:my_projects/SerialMenu.h]
+
+
+// --- Simulation Actions ---
+void menu_load_simulation_from_sd_to_flash(); // [cite: uploaded:my_projects/SerialMenu.h]
+void menu_run_simulation(); // [cite: uploaded:my_projects/SerialMenu.h]
+
+// --- Servo Actions ---
+// Removed: void menu_servo_test(); [cite: uploaded:my_projects/SerialMenu.h]
 /**
- * @brief Attempts to initialize and mount the SD card.
+ * @brief Initiates the servo calibration routine.
  */
-void menu_sd_init();
+void menu_servo_calibrate();
 
+
+// --- Configuration Accessor ---
 /**
- * @brief Performs a simple test write to the SD card ("test_write.txt").
+ * @brief Gets the currently configured radius.
+ * @return The radius in centimeters (cm).
  */
-void menu_sd_write_test();
+float get_configured_radius_cm(); // [cite: uploaded:my_projects/SerialMenu.h]
 
-/**
- * @brief Performs a simple test read from the SD card ("test_write.txt").
- */
-void menu_sd_read_test();
-
-/**
- * @brief Shows the current mount status of the SD card.
- */
-void menu_sd_show_status();
-
-
-// --- Stepper Motor Menu Actions (Placeholders or Existing) ---
-// Placeholder function declarations (could be moved elsewhere later)
-void load_simulation_placeholder(); // Keep placeholder for now
-void run_simulation_placeholder();  // Keep placeholder for now
-static float menu_read_float(const char* prompt);
-static int menu_read_int(const char* prompt);
 
 #endif // SERIAL_MENU_H

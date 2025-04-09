@@ -24,6 +24,7 @@ add_executable(my_project
     SerialMenu.cpp
     sd_card_manager.cpp
     openrocket_parser.cpp
+    servo_controller.cpp
 )
 
 # Include directories for your project source files
@@ -46,6 +47,7 @@ target_link_libraries(my_project PRIVATE
     hardware_spi
     pico_fatfs
     hardware_flash
+    hardware_pwm
     # Add other necessary hardware libraries here, e.g. hardware_i2c
 )
 

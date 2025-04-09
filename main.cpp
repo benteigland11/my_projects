@@ -3,6 +3,7 @@
 #include <pico/stdio_usb.h> // For USB stdio init/check
 #include <iostream>         // For initial messages
 #include <cstdio>           // For getchar_timeout_us, PICO_ERROR_TIMEOUT
+#include "servo_controller.h" 
 
 // Include our module headers
 #include "StepperMotor.h"
@@ -47,6 +48,7 @@ void system_setup() {
 
     // Initialize our modules
     motor_init(); // Initializes motor GPIO and state
+    servo_init(); 
 
     // SerialMenu doesn't require explicit init currently
 
@@ -64,7 +66,7 @@ void system_setup() {
  */
 int main() {
     system_setup();   // Initialize everything (except SD card now)
-    menu_display();   // Show the menu initially
+    menu_display_main();   // Show the menu initially
 
     uint64_t last_motor_update_time = time_us_64();
 
